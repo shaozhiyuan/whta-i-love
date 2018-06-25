@@ -9,9 +9,7 @@ router.route('/spider')
     (async () => {
       const { service } = req.body;
       const createdSpider = await SpiderService.registerSpider(service);
-      return {
-        spider: createdSpider,
-      };
+      return {spider: createdSpider};
     })()
       .then((r) => {
         res.data = r;

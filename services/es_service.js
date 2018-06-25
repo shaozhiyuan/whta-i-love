@@ -1,9 +1,7 @@
 const es = require('elasticsearch');
 const { Client } = es;
 const settings = require('../setting').elasticsearch;
-const client = new Client({
-  host: settings.host,
-});
+const client = new Client({host: settings.host});
 const Content = require('../models/mongoose/content');
 
 const CONTENT_INDEX = 'what_i_love';

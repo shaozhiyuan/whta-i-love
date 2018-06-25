@@ -6,9 +6,7 @@ const errorHandler = require('./middlewares/http_error_handler');
 const logger = require('./utils/loggers/logger');
 require('./services/mongodb_connection');
 const NotFoundError = require('./errors/http_errors/resource_not_found_error');
-
 const apiIndex = require('./routes/api');
-
 const app = express();
 
 // view engine setup

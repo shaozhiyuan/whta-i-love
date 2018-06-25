@@ -1,13 +1,9 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
-
 const pbkdf2Async = require('bluebird').promisify(require('crypto').pbkdf2);
-
 const PasswordConfig = require('../../cipher/password_config');
-
-const HttpReqParaError = require(
-  '../../errors/http_errors/http_request_param_error');
+const HttpReqParaError = require('../../errors/http_errors/http_request_param_error');
 
 const UserSchema = new Schema({
   name: { type: String, required: true, index: 1 },

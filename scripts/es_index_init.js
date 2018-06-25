@@ -1,9 +1,7 @@
 const es = require('../services/es_service').client;
 
 async function initWhatILoveIndex() {
-  await es.indices.create({
-    index: 'what_i_love',
-  });
+  await es.indices.create({index: 'what_i_love'});
   await es.indices.putMapping({
     index: 'what_i_love',
     type: 'content',
